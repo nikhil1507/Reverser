@@ -25,3 +25,7 @@
 .row {
   height: 40px;
 }
+
+.snake-cell {
+  background-color: chartreuse;
+}
