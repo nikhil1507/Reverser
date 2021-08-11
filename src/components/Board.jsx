@@ -58,9 +58,8 @@ const Board = () => {
   );
   const [foodCell, setFoodCell] = useState(snake.head.value.cell + 5);
   const [direction, setDirection] = useState(Direction.RIGHT);
-  const [foodShouldReverseDirection, setFoodShouldReverseDirection] = useState(
-    false
-  );
+  const [foodShouldReverseDirection, setFoodShouldReverseDirection] =
+    useState(false);
   const [tutorialVisible, setTutorialVisible] = useState(true);
   const [index, setIndex] = useState(0);
   const [disable, setDisable] = useState(false);
@@ -190,7 +189,7 @@ const Board = () => {
   };
   const handleNext = () => {
     if (index === Tutorial.length - 1) {
-      setDisable(true);
+      setTutorialVisible(!tutorialVisible);
       setIndex(0);
       return;
     }
